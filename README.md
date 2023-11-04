@@ -1,23 +1,12 @@
-## Grails 6.0.0 Documentation
+## Grails 6.0.0 - Multitenant Discriminator Issue
 
-- [User Guide](https://docs.grails.org/6.0.0/guide/index.html)
-- [API Reference](https://docs.grails.org/6.0.0/api/index.html)
-- [Grails Guides](https://guides.grails.org/index.html)
----
+https://github.com/grails/gorm-hibernate5/issues/781
 
-## Feature asset-pipeline-grails documentation
+## To Reproduce
 
-- [Grails Asset Pipeline Core documentation](https://www.asset-pipeline.com/manual/)
+`gradle integrationTest` 
 
-## Feature scaffolding documentation
+## Expected Behavior
 
-- [Grails Scaffolding Plugin documentation](https://grails.github.io/scaffolding/latest/groovydoc/)
-
-- [https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html](https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html)
-
-## Feature geb documentation
-
-- [Grails Geb Functional Testing for Grails documentation](https://github.com/grails3-plugins/geb#readme)
-
-- [https://www.gebish.org/manual/current/](https://www.gebish.org/manual/current/)
+`AuthorService.testNotHonored` should only return 1 author since the service is annotated with `@CurrentTenant` 
 
